@@ -74,8 +74,8 @@ if __name__ == '__main__':
     print "Siblings : ", siblings_tuple
     print "Total number of siblings: ", len(siblings_tuple) # Found the number of siblings
     siblings_tuple = siblings_tuple + ("Amma", "Nanna")
-    familymembers_tuple = siblings_tuple # Modified sibling tuple and added to family tuple
-    print "Family members: ", familymembers_tuple
+    family_members_tuple = siblings_tuple # Modified sibling tuple and added to family tuple
+    print "Family members: ", family_members_tuple
 
     # Question 4
     it_companies_set = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
@@ -142,16 +142,19 @@ if __name__ == '__main__':
     # Question 9
     import math
     num_of_students = input("Input the number of students: ")  # Fetched the number of students from user
-    studentweight_list_lbs = []   # Initialized list to store student weights in lbs
-    for studentweight in range(0, num_of_students):
-        studentweight_list_lbs.append(input("Input weight of student :" +str(studentweight+1)))  # For each student asking user to input weights
-    print studentweight_list_lbs
-    studentweight_list_kgs = []  # Initialized another list to store student weights in kgs
-    for studentweight_lbs in range(0, num_of_students):
-        studentweight_list_kgs.append(float(studentweight_list_lbs[studentweight_lbs]/2.2046)) # For each student weight in lbs, converting them to kgs and storing in another list
-    print studentweight_list_kgs
-    studwght_formattedlist_kgs = [ '%.2f' % elem for elem in studentweight_list_kgs ]  # Reducing the decimal places to 2 digits
-    print studwght_formattedlist_kgs
+    student_wgt_list_lbs = []   # Initialized list to store student weights in lbs
+    for student_weight in range(0, num_of_students):
+        student_wgt_list_lbs.append(input("Input weight of student :" +str(student_weight+1)))  # For each student asking user to input weights
+    print 'Student weights given by user in pounds: ', student_wgt_list_lbs
+    student_wgt_list_kgs = []  # Initialized another list to store student weights in kgs
+    for student_weight_lbs in range(0, num_of_students):
+        student_wgt_list_kgs.append(float(student_wgt_list_lbs[student_weight_lbs]/2.2046)) # For each student weight in lbs, converting them to kgs and storing in another list
+    #print student_wgt_list_kgs
+    temp = []
+    for i in student_wgt_list_kgs:
+        float(i)
+        temp.append(float(round(i, 2)))
+    print 'Student weights converted to Kilograms: ', temp
 
 
 
